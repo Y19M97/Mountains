@@ -1,0 +1,203 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --main-color: #ff6f3c;
+    --transition: .7s;
+}
+
+body {
+    font-family: 'segoe ui light';
+}
+
+::-webkit-scrollbar {
+    width: 1rem;
+    transition: width 2s;
+}
+
+::-webkit-scrollbar-track {
+    margin: 5px 0;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 4px;
+}
+
+/* start navbar style  */
+.navbar h1 {
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.navbar .active {
+    color: var(--main-color) !important;
+}
+
+.navbar .nav-link {
+    transition: var(--transition);
+}
+
+.navbar .nav-link:hover {
+    color: var(--main-color) !important;
+}
+
+
+
+/* start header style  */
+
+.header {
+    background-image: url(../img/bg.jpg);
+    background-attachment: fixed;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    text-transform: capitalize;
+}
+
+.layout {
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.header span {
+    color: var(--main-color);
+}
+
+
+/* start service style  */
+.service .service-caption {
+    position: relative;
+
+}
+
+.service .service-caption::before {
+    content: 'service';
+    text-transform: uppercase;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -2rem;
+    left: 0;
+    color: rgba(0, 0, 0, 0.2);
+    font-size: 4rem;
+
+}
+
+.service h3 {
+    position: relative;
+}
+
+.service h3::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    bottom: -1rem;
+    left: 0;
+    background-color: var(--main-color);
+    height: .1rem;
+}
+
+img {
+    height: 400px;
+}
+
+.service .item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.service .item::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, .5);
+    bottom: 0%;
+    left: 100%;
+    transition: var(--transition);
+}
+
+.service .item:hover.item::after {
+    left: 0;
+}
+
+.service .icon {
+    z-index: 1;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.item:hover .icon {
+    opacity: 1;
+    color: var(--main-color) !important;
+}
+
+
+/* start Country Style  */
+.country .country-caption {
+    position: relative;
+    background-image: url(../img/eg6.jpg);
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+
+}
+
+.text-header {
+    background-color: rgba(0, 0, 0, .6);
+}
+
+
+.country .city {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.country .city::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, .5);
+    bottom: 100%;
+    left: 0;
+    transition: var(--transition);
+}
+
+.country .city:hover.city::after {
+    bottom: 0;
+}
+
+
+/* start contacts  style */
+.contacts h3 {
+    position: relative;
+    display: inline;
+
+}
+
+.contacts h3::after {
+    content: '';
+    position: absolute;
+    bottom: -.2rem;
+    width: 100%;
+    height: .1rem;
+    left: 0;
+    background-color: var(--main-color);
+}
+
+
+/* start footer style  */
+footer span {
+    color: var(--main-color);
+}
